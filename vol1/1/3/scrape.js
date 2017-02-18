@@ -1,7 +1,6 @@
 // scrape.js
 var casper = require('casper').create({
     verbose: true,
-    logLevel: 'debug',
     pageSettings: {
       webSecurityEnabled: false
     }
