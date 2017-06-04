@@ -12,10 +12,13 @@ class SuumoSpider(scrapy.Spider):
         for url in next_selector.extract():
             yield scrapy.Request(response.urljoin(url), callback=self.parse)
         def extract_with_xpath(query):
-            return response.xpath(query).extract_first().strip().strip('m').strip('万円')
+            return response.xpath(query).extract_first().strip().strip('m').strip('万円').strip('階')
 
         for table in response.css('table.cassetteitem_other'):
             yield {
                 'price' : extract_with_xpath('//span[@class="cassetteitem_other-emphasis ui-text--bold"]/text()'),
+                'fee'   : extract_with_xpath('//*[@id="js-bukkenList"]/ul[2]/li[2]/div/div[2]/table/tbody/tr/td[5]/text()'),
                 'space' : extract_with_xpath('//sup/parent::node()/text()'),
+                'floor' : extract_with_xpath('//*[@id="js-bukkenList"]/ul[1]/li[2]/div/div[2]/table/tbody/tr/td[3]/text()'),
+                'type'  : extract_with_xpath('//*[@id="js-bukkenList"]/ul[4]/li[5]/div/div[2]/table/tbody/tr/td[7]/text()')
             }
