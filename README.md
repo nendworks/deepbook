@@ -1,23 +1,49 @@
 # deepbook
 
-## Getting Super Powers
+## Vol. 1 目次
+1. 画像で遊ぶ
+    1. 画風変換
+    1. 線画着色
+    1. [ユニクロ検知](https://github.com/nendworks/deepbook/issues/5)
+    1. 物体検知
+    1. OCR
+1. 予測する
+    1. [賃貸住宅の相場予測](https://github.com/nendworks/deepbook/issues/4)
+    1. 売上予測
+    1. 天気予報
+    1. レコメンドエンジン
+    1. 備品発注サイクル
+    1. 飲食店と立地条件の予測
+1. 生成する
+    1. 決算情報からニュース記事を作る
+    1. キャッチコピーを作る
+    1. 非実在アイドルの顔を生成する
+1. 判定する
+    1. スパム判定
+    1. きゅうりのサイズを判定する
 
-Becoming a super hero is a fairly straight forward process:
+## Vol2. 目次
+1. はじめに
+ディープラーニングを含む機械学習の知識を、実用的レベルまで落とし込んだ例題を実装しながら学習することを目的とした教材です。
 
-```
-$ give me super-powers
-```
+1. 主要ライブラリの解説と環境構築
+chainerをベースにしていく予定
+動作環境: mac without GPU 
+    - chainer
+    - tensorflow 
+    - （オプション）keras
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
-
+1. （オプション）便利な開発環境
+    1. Jupyter Notebook
+1. 機械学習の分類
+1. 教師あり学習
+    1. 回帰問題
+    1. 分類問題
+    1. ニューラルネットワーク実装
+    1. ディープラーニングを使った画像生成
+1. 教師なし学習
+    1. クラスタリング
+1. 強化学習
+    1. ゲーム攻略
+    1. 自動運転
+1. （オプション）Rails / iOS アプリケーションへの組み込み
